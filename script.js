@@ -14,7 +14,7 @@ function timerStart (){
 }
 
 var quizContainer=document.getElementById('quiz');
-var resultContainer=document.getElementById('results');
+var resultsContainer=document.getElementById('results');
 var nextContainer= document.getElementById('next');
 var submitContainer=document.getElementById('submit');
 
@@ -54,13 +54,32 @@ function quizContent(questions, quizContainer){
     console.log(quizContainer);
 }
 
+function storeAnswer(questions,quizContainer){
+    var userChoice;
+    var correctAnswer=0;
+
+    for (var i=0;i<questions.length;i++){
+        userChoice=quizContainer.querySelector('input[name=question' + i + ']:checked').value;
+        console.log(userChoice);
+        if(userChoice===questions[i].correctAnswer){
+            correctAnswer++;
+        }
+        console.log(correctAnswer);
+    }
+}
+
 //submitContainer.addEventListener('click', quizContent);
 //timerStart();
 
 nextContainer.addEventListener('click', function (){
     quizContent(questions,quizContainer);
-    timerStart();
+    //timerStart();
 }
 )
+submitContainer.addEventListener('click',function(){
+    storeAnswer(questions,quizContainer);
+})
+
+
 
 //quizContent(questions, quizContainer);
