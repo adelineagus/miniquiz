@@ -14,24 +14,53 @@ function timerStart (){
 }
 
 var quizContainer=document.getElementById('quiz');
-var resultContainer=document.getElementById('#results');
-var submitContainer= document.getElementById('#submit');
+var resultContainer=document.getElementById('results');
+var nextContainer= document.getElementById('next');
+var submitContainer=document.getElementById('submit');
 
-submitContainer.addEventListener('click', quizGame);
 var questions=[
     {
-        Question: "what's my name?",
-        Answers: {
-            A: "Adeline",
-            B: "Adel",
-            C: "Line"
+        question: "what's my name?",
+        answers: {
+            a: 'Adeline',
+            b: 'Adel',
+            c: 'Line'
         },
-        correctAnswer: "C"
+        correctAnswer: 'a'
     },
 ]
 
-function quizGame(){
-    
+function quizContent(questions, quizContainer){
+    var output=[];
+    var answers;
+
+    for (var i=0; i<questions.length;i++){
+        answers=[];
+        for(letter in questions[i].answers){
+            answers.push(
+                '<label><input type= "radio" name= "question' + i + '"value= "' + letter +'">' + letter + ':'+ questions[i].answers[letter]+'</label>'
+            );
+        }
+        console.log(answers);
+        output.push(
+            '<div class = "question">'+ questions[i].question +'</div>'
+            +
+            '<div class= "answers">' + answers.join('') +'</div>'
+        );
+        console.log(output);
+    }
+
+    quizContainer.innerHTML=output.join('');
+    console.log(quizContainer);
 }
 
-timerStart();
+//submitContainer.addEventListener('click', quizContent);
+//timerStart();
+
+nextContainer.addEventListener('click', function (){
+    quizContent(questions,quizContainer);
+    timerStart();
+}
+)
+
+//quizContent(questions, quizContainer);
