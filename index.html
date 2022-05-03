@@ -9,22 +9,27 @@
 
     <body>
         <header>
-            <div class="highscore">Highscore:</div>
-            <div class="timer">Time: </div>
-            <div class="timer-countdown"></div>
+            <div class="timer">
+                <h3>Timer:</h3>
+                <div class="timer-countdown"></div>
+            </div>
         </header>
-
         <main>
             <section>
                 <button id="start">start</button>
-                <div id="quiz"></div>
-                <button id="next">Next</button>
-                <button id="submit">Submit</button>
-                <button id="results">Results</button>
-                <div id="show-results"></div>
+                <div id="quiz">
+                    <div id="question"></div>
+                    <div id="choices"></div>
+                    <div id= "statement"></div>
+                    <div id="results"></div>
+                    <form id= "initials-form" method="POST">
+                        <label>Enter initials: </label>
+                        <input type="text" placeholder= "your initials" id="initials-input">
+                    </form>
+                </div>
             </section>
         </main>
-        <script src="script.js"></script>
+       <script src="script.js"></script>
     </body>
 
 
