@@ -4,41 +4,40 @@
         <title>Quiz</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <!--<link rel="stylesheet" type="text/css" href=""/>-->
+        <link rel="stylesheet" type="text/css" href="style.css"/>
     </head>
 
     <body>
         <header>
             <div class="timer">
-                <h3>Timer:</h3>
+                <p>Timer:<p>
                 <div class="timer-countdown"></div>
             </div>
+            <button id="view-scores">View Scores</button>
         </header>
         <main>
-            <section>
-                <div id="welcome-page">
-                    <button id="start">start</button>
-                </div>
-                <div id="quiz">
-                    <div id="question"></div>
-                    <div id="choices"></div>
-                    <div id= "statement"></div>
-                </div>
-                <div id="results-page">
-                    <div id="results"></div>
-                    <form id= "initials-form" method="POST">
-                        <label>Enter initials: </label>
-                        <input type="text" placeholder= "your initials" id="initials-input">
-                    </form>
-                </div>
-                <div id="score-page">
-                    <ol id="score"></ol>
-                    <button id= "play-again">play again</button>
-                </div>
+            <section id="welcome-page">
+                <button class= "center" id="start">start</button>
+            </section>
+            <section id="quiz-page">
+                <div id="question"></div>
+                <div id="choices"></div>
+            </section>
+            <div id= "statement"></div>
+            <section id="results-page">
+                <div id="results"></div>
+                <form id= "initials-form" method="POST">
+                    <label>Enter initials: </label>
+                    <input type="text" placeholder= "your initials" id="initials-input">
+                </form>
+            </section>
+            <section id="score-page">
+                <ol id="score"></ol>
+                <button id= "play-again">play again</button>
+                <button id="clear-scores">clear scores</button>
             </section>
         </main>
        <script src="script.js"></script>
     </body>
-
 
 </html>
