@@ -45,7 +45,13 @@ section{
     padding:10px;
 }
 
-#start{
+.center{
     display:flex;
     justify-content:center;
+}
+
+
+#score-page{
+    display:flex;
+    flex-wrap:wrap;
 }

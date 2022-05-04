@@ -151,7 +151,7 @@ function showScores(){
     welcomeContainer.style.display='none';
     quizContainer.style.display='none';
     resultspageContainer.style.display='none';
-    scorepageContainer.style.display='inline-block';
+    scorepageContainer.style.display='flex';
     getScores();
     scoreContainer.innerHTML="";
     for(var i=0; i<userInitials.length;i++){
