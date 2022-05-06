@@ -9,32 +9,53 @@
 
     <body>
         <header>
-            <div class="timer">
+            <!--timer section which include timer text, and countdown-->
+            <section class="timer">
                 <p>Timer:<p>
-                <div class="timer-countdown"></div>
-            </div>
+                <section class="timer-countdown">50</section>
+            </section>
+            <!--view-scores button to show score page-->
             <button id="view-scores">View Scores</button>
         </header>
+        
         <main>
+           
+            <!--welcome page contains welcome message and start button-->
             <section class= "center" id="welcome-page">
+                <h1 class="center">Welcome to Miniquiz!</h1>
+                <p>Warning!!!! <br> 10 seconds will be taken away from you for every wrong answer!</p>
                 <button id="start">start</button>
             </section>
+            
+            <!--quiz page contains question and multiple choices answers-->
             <section id="quiz-page">
                 <div class= "center" id="question"></div>
                 <div class= "center" id="choices"></div>
             </section>
-            <div id= "statement"></div>
+            
+            <!--section to show true/false statements-->
+            <section id= "statement"></section>
+            
+            <!--results page contains text, results/correct amount, and prompt user to enter initials-->
             <section id="results-page">
-                <div class="center" id="results"></div>
+                <h1 class="center"> You did it! </h1>
+                <section class="center" id="results"></section>
                 <form class="center" id= "initials-form" method="POST">
-                    <label>Enter initials: </label>
+                    <label>Enter initials:  </label>
                     <input type="text" placeholder= "your initials" id="initials-input">
                 </form>
             </section>
+
+            <!--score page contains title and list of scores & initials, button for play again or clear all scores-->
             <section id="score-page">
-                <ol id="score"></ol>
-                <button id= "play-again">play again</button>
-                <button id="clear-scores">clear scores</button>
+                <h1 class= "center">Highscores</h1>
+                <section class="center" id="score-list">
+                    <ol id="score"></ol>
+                </section>
+                <section class="center" id="score-buttons">
+                    <button id= "play-game">play game</button>
+                    <button id="clear-scores">clear scores</button>
+                </section>
             </section>
         </main>
        <script src="script.js"></script>

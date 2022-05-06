@@ -1,41 +1,74 @@
 * {
+    margin:0;
     box-sizing: border-box;
 }
 
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font:30px;
     display:flex;
     flex-direction:column;
+    min-height:100vh;
     justify-content: flex-start;
     background-color: beige;
 }
 
 header{
+    display:flex;
     padding:20px;
     background-color: black;
-    color:beige;
+    color:white;
+    font-size:20px;
 }
 
 .timer{
     margin:10px;
-    text-align:left;
-    display:inline-block;
-}
-
-#view-scores{
-    margin:10px;
-    float:right;
+    margin-right:auto;
 }
 
 .timer-countdown{
     display:inline-block;
 }
 
+button{
+    margin:10px;
+    width:200px;
+    background-color:white;
+    font-size: 20px;
+    color:black;
+}
+#view-scores{
+    margin:10px;
+    margin-left:auto;
+    background-color:white;
+    font-size:20px;
+    color:black;
+}
+
+
 main{
     display:flex;
     flex-wrap:wrap;
     align-items: center;
     justify-content:center;
+}
+#welcome-page h1{
+    text-align:center;
+}
+#welcome-page p{
+    flex:100%;
+    text-align:center;
+    color:red;
+}
+#start{
+    font-size:30px;
+    height:60px;
+    line-height:15px;
+    margin-top: 30px;
+    background-color:black;
+    color:white;
+    max-width:500px;
+    text-align:center;
 }
 
 section{
@@ -47,11 +80,43 @@ section{
 
 .center{
     display:flex;
+    width:100%;
     justify-content:center;
+    flex-wrap:wrap;
 }
 
+.choice-button{
+    background-color: pink;
+}
 
+#statement{
+    text-align:center;
+
+}
+
+label{
+    font-size: 25px;
+}
+#initials-form{
+    padding:30px;
+}
+
+#initials-input{
+    font-size:20px;
+}
 #score-page{
     display:flex;
     flex-wrap:wrap;
+}
+
+h1{
+    font-size:50px;
+    padding:20px;
+}
+
+ol{
+    font-size:20px;
+}
+#score{
+    padding:0;
 }
