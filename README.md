@@ -13,6 +13,9 @@ Achievements:
 7. when user click "view scores" button on the upper right side, user will be presented with score page (containing score records, play button and clear button)
 
 
-Screenshot: 
-
-Website:
+Application: https://adelineagus.github.io/miniquiz/
+Github: https://github.com/adelineagus/miniquiz
+Screenshot-welcome page: [link](./images/welcomepage.png)
+Screenshot-quiz section: [link](./images/quiz.png)
+Screenshot-initials: [link](./images/initials.png)
+Screenshot-highscores: [link](./images/highscores.png)
